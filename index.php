@@ -56,6 +56,35 @@
         //para concatenar utilizamos punto (.)
         echo "Mi nombre es: " . $nombre . " " . $apellido;
 
+        # declarando una constante
+        define("PI2", 3.1416);
+        //forma actual de declarar una constante
+        const PI = 3.1416;
+        echo "<br>";
+        echo PI;
+
+        //declarando una funcion
+        $suma = 12 + 5;
+        $suma2 = 100 + 5;
+        echo "<br>";
+        echo "La suma es: " . $suma2;
+
+        function sumar(){
+            echo 12 + 15;
+        }
+
+        sumar();
+        sumar();
+        sumar();
+
+        //funcion con parametros y argumentos
+        function sumarParametros($a, $b){
+            echo $a + $b;
+        }
+        echo "<br>";
+        sumarParametros(12,15);
+        sumarParametros(100,34);
+        sumarParametros(9,67);
     ?>
     
 </body>

@@ -14,3 +14,5 @@ let pantalon = {
     talla: ["s","m","l", "xl"],
     marca: "cat"
 }
+
+const PI = 3.1416;
