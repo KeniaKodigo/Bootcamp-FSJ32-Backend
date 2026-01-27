@@ -8,7 +8,7 @@ let dato = null; //null
 
 let carrito = ["pantalon","calcetines","camisa"]
 
-//objeto
+//objeto (clave-valor)
 let pantalon = {
     color: "azul",
     talla: ["s","m","l", "xl"],
