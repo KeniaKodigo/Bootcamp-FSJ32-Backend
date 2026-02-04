@@ -7,6 +7,8 @@ class Persona{
     public int $edad; 
     public string $color_ojos;
     public string $color_piel;
+    protected string $telefono;
+    private string $password;
 
     #declarando un constructor
     public function __construct($name, $age, $color_eyes, $color_skin)
@@ -41,7 +43,9 @@ class Persona{
 
 #instanciando la clase persona = creando objetos de la clase persona
 $persona1 = new Persona("Maria",17,"negros","blanca");
+$persona1->color_piel = "celeste";
 print_r($persona1);
+$persona1->estudiar();
 echo "<br>";
 
 
