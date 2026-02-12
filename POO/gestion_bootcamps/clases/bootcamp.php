@@ -1,5 +1,19 @@
 <?php
 
+/**
+ * abstraccion: extraer lo mas relevante para tus clases
+ * 
+ * herencia: la forma en como una clase comparto sus atributos y metodos a otra clase (el objetivo es reutilizar codigo de otras clases)
+ * 
+ * polimorfismo: cuando un mismo metodo puede tener varios comportamientos
+ * 
+ * encapsulamiento: la forma en como restringimos el acceso a los atributos/metodos de una clase
+ * existen 3 tipos de modificadores: 
+ *  public: dentro de la clase, fuera de la clase y clases heredades, 
+ *  protected: dentro de la clase y clases heredades (herencia), 
+ *  private: dentro de la clase (tributo/set -> actualiza el valor del atributo)get -> devolver el valor del a
+ */
+
 class Bootcamp{
     protected string $titulo;
     protected int $duracion; //que el numero hace referencia a semanas
@@ -8,6 +22,7 @@ class Bootcamp{
     protected array $estudiantes = [];
     private bool $esGratuito;
 
+    //constructor por defecto / constructor parametrizado
     public function __construct($title, $duracion, $temario, $esGratuito)
     {
         $this->titulo = $title;
@@ -15,6 +30,17 @@ class Bootcamp{
         $this->temario = $temario;
         $this->esGratuito = $esGratuito;
     }
+
+    /** constructor por defecto
+     * public function __construct()
+    * {
+     *       $this->titulo = "FullStack JR";
+      *      $this->duracion = 6;
+      *      $this->temario = "Desarrollo WEB";
+      *      $this->esGratuito = false;
+      *  }
+    */
+    
 
     public function agregarEstudiantes(){
         //code..
@@ -46,31 +72,4 @@ class Bootcamp{
 
 }
 
-$bootcamp1 = new Bootcamp("Java Developer",12,"Aprende Java y base de datos",false);
-//echo $bootcamp1->titulo;
-echo "<br>";
-//actualizando que el bootcamp ahora es gratuito
-$bootcamp1->setEsGratuito(true);
-$bootcamp1->mostrarDetalle();
-
-
-//creando otra clase (y aplicando herencia)
-class BootcampFullStackJr extends Bootcamp{
-
-    #cambiando el comportamiento del metodo de la clase padre
-    public function mostrarDetalle()
-    {
-        echo "📗 <b>Bootcamp FullStack:</b> {$this->titulo}<br>";
-        echo "📅 <b>Duracion:</b> {$this->duracion} semanas<br>";
-        echo "📝 <b>Temario:</b> {$this->temario}<br>";
-        echo $this->getEsGratuito() ? "🎯 <b>Tipo Bootcamp:</b> 😀 Bootcamp Gratuito<br>" : "🎯 <b>Tipo Bootcamp:</b> 💰 Bootcamp de Paga<br>";
-    }
-
-    public function entregarCertificadoWeb(){
-        echo "Felicidades al estudiante por la certificacion";
-    }
-}
-
-$bootcamp2 = new BootcampFullStackJr("Full stack jr 32", 24, "Aprende las ramas frontend y backend del desarrollo web",false);
-echo "<br>";
-$bootcamp2->mostrarDetalle();
+$objeto_bootcamp = new Bootcamp("aa",2,"sss",true);
