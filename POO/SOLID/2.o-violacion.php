@@ -10,6 +10,8 @@ class Course {
             return 45;
         } elseif ($level === 'avanzado') {
             return 60;
+        } elseif ($level == 'callcenter'){
+            return 20;
         }
     }
 }

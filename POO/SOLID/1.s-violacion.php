@@ -9,7 +9,7 @@ class Student {
         //code..
     }
     
-    public function registerPayment($amount) {
+    public function registerPayment($student, $amount) {
         //code..
     }
 
