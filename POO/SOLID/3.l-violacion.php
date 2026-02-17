@@ -1,7 +1,7 @@
 <?php
 
 class Teacher {
-    public function assignTime($schedule) {
+    public function assignSchedule($schedule) {
         // code..
     }
 }

@@ -53,6 +53,10 @@ abstract class Courses{
     public abstract function getDuration();
 }
 
+class Academic {
+
+}
+
 class CourBasic extends Courses{
 
     public function getDuration()

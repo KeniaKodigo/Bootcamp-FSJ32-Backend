@@ -17,5 +17,6 @@ class Course implements AcademicManagement {
 
     public function registerPayment() {
         // Curso no debería encargarse de pagos
+        throw new Exception("el registro de pago no se hace en el curso");
     }
 }
